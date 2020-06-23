@@ -1,0 +1,35 @@
+@import '../theme/variables';
+
+@mixin frame($height: 36) {
+  height: #{$height}px;
+  border-radius: #{$height/2}px;
+  padding: 8px 25px;
+}
+
+@mixin reset {
+  outline: 0;
+  border: 0;
+}
+
+@mixin transition($duration: 0.25, $type: all) {
+  transition: $type #{$duration}s ease-in-out;
+}
+
+@mixin default {
+  color: $brandGreen;
+  background-color: transparent;
+  border: 1px solid $brandGreen;
+  cursor: pointer;
+
+  &:hover {
+    border-color: lighten($brandGreen, 10);
+    color: lighten($brandGreen, 10);
+  }
+}
+
+.button {
+  @include reset;
+  @include frame(36);
+  @include transition();
+  @include default;
+}
