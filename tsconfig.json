@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@leap/uikit": ["libs/uikit/src/index.ts"],
-      "@leap/store": ["libs/store/src/index.ts"]
+      "@leap/store": ["libs/store/src/index.ts"],
+      "@leap/http": ["libs/http/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

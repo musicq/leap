@@ -245,6 +245,43 @@
           }
         }
       }
+    },
+    "http": {
+      "root": "libs/http",
+      "sourceRoot": "libs/http/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/http/tsconfig.lib.json",
+              "libs/http/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/http/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/http/jest.config.js",
+            "tsConfig": "libs/http/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/libs/http",
+            "tsConfig": "libs/http/tsconfig.lib.json",
+            "packageJson": "libs/http/package.json",
+            "main": "libs/http/src/index.ts",
+            "assets": ["libs/http/*.md"]
+          }
+        }
+      }
     }
   },
   "cli": {
