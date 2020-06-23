@@ -122,6 +122,25 @@
             "exclude": ["**/node_modules/**", "!libs/uikit/**/*"]
           }
         },
+        "build": {
+          "builder": "@nrwl/web:package",
+          "options": {
+            "outputPath": "dist/libs/uikit",
+            "tsConfig": "libs/uikit/tsconfig.lib.json",
+            "project": "libs/uikit/package.json",
+            "entryFile": "libs/uikit/src/index.ts",
+            "external": ["react", "react-dom"],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
