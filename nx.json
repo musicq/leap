@@ -38,6 +38,9 @@
     "uikit-e2e": {
       "tags": [],
       "implicitDependencies": ["uikit"]
+    },
+    "store": {
+      "tags": []
     }
   }
 }

@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@leap/uikit": ["libs/uikit/src/index.ts"]
+      "@leap/uikit": ["libs/uikit/src/index.ts"],
+      "@leap/store": ["libs/store/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
